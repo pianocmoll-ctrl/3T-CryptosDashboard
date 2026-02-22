@@ -1,0 +1,92 @@
+
+> dashboard@0.1.0 lint
+> eslint
+
+
+/Users/tt/Desktop/Projects/3T-CRYPTOS_DASHBOARD/src/app/page.tsx
+  2:10  warning  'Card' is defined but never used             @typescript-eslint/no-unused-vars
+  2:16  warning  'CardContent' is defined but never used      @typescript-eslint/no-unused-vars
+  2:29  warning  'CardDescription' is defined but never used  @typescript-eslint/no-unused-vars
+  2:46  warning  'CardHeader' is defined but never used       @typescript-eslint/no-unused-vars
+  2:58  warning  'CardTitle' is defined but never used        @typescript-eslint/no-unused-vars
+  4:10  warning  'Search' is defined but never used           @typescript-eslint/no-unused-vars
+
+/Users/tt/Desktop/Projects/3T-CRYPTOS_DASHBOARD/src/components/dashboard/BuyAnalysis.tsx
+   4:58  warning  'CardTitle' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               @typescript-eslint/no-unused-vars
+   8:69  warning  'RefreshCcw' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              @typescript-eslint/no-unused-vars
+  36:9   error    Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+/Users/tt/Desktop/Projects/3T-CRYPTOS_DASHBOARD/src/components/dashboard/BuyAnalysis.tsx:36:9
+  34 |
+  35 |     useEffect(() => {
+> 36 |         fetchAnalysis();
+     |         ^^^^^^^^^^^^^ Avoid calling setState() directly within an effect
+  37 |     }, []);
+  38 |
+  39 |     return (  react-hooks/set-state-in-effect
+  37:8   warning  React Hook useEffect has a missing dependency: 'fetchAnalysis'. Either include it or remove the dependency array                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    react-hooks/exhaustive-deps
+
+/Users/tt/Desktop/Projects/3T-CRYPTOS_DASHBOARD/src/components/dashboard/MarketReports.tsx
+    7:10  warning  'ScrollArea' is defined but never used                           @typescript-eslint/no-unused-vars
+    8:10  warning  'Newspaper' is defined but never used                            @typescript-eslint/no-unused-vars
+    8:35  warning  'Cpu' is defined but never used                                  @typescript-eslint/no-unused-vars
+    8:40  warning  'TrendingUp' is defined but never used                           @typescript-eslint/no-unused-vars
+    8:52  warning  'TrendingDown' is defined but never used                         @typescript-eslint/no-unused-vars
+    8:66  warning  'Info' is defined but never used                                 @typescript-eslint/no-unused-vars
+  140:41  error    `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+  140:53  error    `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+  243:25  error    Unexpected any. Specify a different type                         @typescript-eslint/no-explicit-any
+
+/Users/tt/Desktop/Projects/3T-CRYPTOS_DASHBOARD/src/components/dashboard/PriceForecast.tsx
+    4:29  warning  'CardDescription' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             @typescript-eslint/no-unused-vars
+   51:9   error    Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+/Users/tt/Desktop/Projects/3T-CRYPTOS_DASHBOARD/src/components/dashboard/PriceForecast.tsx:51:9
+  49 |
+  50 |     useEffect(() => {
+> 51 |         handleGenerate();
+     |         ^^^^^^^^^^^^^^ Avoid calling setState() directly within an effect
+  52 |     }, []);
+  53 |
+  54 |     return (  react-hooks/set-state-in-effect
+  196:26  error    Unexpected any. Specify a different type                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                @typescript-eslint/no-explicit-any
+
+/Users/tt/Desktop/Projects/3T-CRYPTOS_DASHBOARD/src/components/dashboard/SellAnalysis.tsx
+    4:29   warning  'CardDescription' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          @typescript-eslint/no-unused-vars
+    7:10   warning  'Badge' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    @typescript-eslint/no-unused-vars
+    8:55   warning  'Info' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     @typescript-eslint/no-unused-vars
+    8:61   warning  'Bookmark' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 @typescript-eslint/no-unused-vars
+    8:71   warning  'RefreshCcw' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               @typescript-eslint/no-unused-vars
+   34:9    error    Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+/Users/tt/Desktop/Projects/3T-CRYPTOS_DASHBOARD/src/components/dashboard/SellAnalysis.tsx:34:9
+  32 |
+  33 |     useEffect(() => {
+> 34 |         fetchAnalysis();
+     |         ^^^^^^^^^^^^^ Avoid calling setState() directly within an effect
+  35 |     }, []);
+  36 |
+  37 |     return (  react-hooks/set-state-in-effect
+  184:41   error    `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      react/no-unescaped-entities
+  184:219  error    `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      react/no-unescaped-entities
+
+✖ 30 problems (9 errors, 21 warnings)
+

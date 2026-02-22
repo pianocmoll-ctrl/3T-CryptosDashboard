@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>CryptoDash - Sell Analysis</title>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Google Fonts: Manrope -->
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1132d4",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101322",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Manrope', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen">
+<!-- Main Layout Container -->
+<div class="relative flex min-h-screen flex-col">
+<!-- Header / Navigation -->
+<header class="sticky top-0 z-50 w-full border-b border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex h-16 items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="bg-primary p-1.5 rounded-lg">
+<span class="material-symbols-outlined text-white text-2xl">insights</span>
+</div>
+<h1 class="text-xl font-800 tracking-tight text-slate-900 dark:text-white">CryptoDash</h1>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-sm font-medium text-slate-500 hover:text-primary transition-colors" href="#">Portfolio</a>
+<a class="text-sm font-medium text-slate-500 hover:text-primary transition-colors" href="#">Buy Analysis</a>
+<a class="text-sm font-semibold text-primary border-b-2 border-primary pb-1" href="#">Sell Analysis</a>
+<a class="text-sm font-medium text-slate-500 hover:text-primary transition-colors" href="#">Market</a>
+<a class="text-sm font-medium text-slate-500 hover:text-primary transition-colors" href="#">News</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="hidden sm:inline-flex items-center justify-center rounded-lg px-4 py-2 text-sm font-bold text-slate-700 dark:text-slate-200 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 transition-colors">Login</button>
+<button class="inline-flex items-center justify-center rounded-lg px-4 py-2 text-sm font-bold text-white bg-primary hover:bg-primary/90 shadow-lg shadow-primary/20 transition-all">Sign Up</button>
+<div class="h-10 w-10 rounded-full bg-slate-200 dark:bg-slate-800 border-2 border-white dark:border-slate-700 overflow-hidden">
+<img class="h-full w-full object-cover" data-alt="User profile avatar placeholder" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZ3EpZSqzEczE8N0stmTfBsCU11zCCjcl_h20JsL35mngZZtWli5pSz-ybYeMGr77avZAWRfhueuXGK6rC9p69HAGuSIl3c6yEXBm290UQrg5Gp-JTZHvhRTSiiq_sA3GxJdoxKeyjDr29KPh2d4NeIfBIRkM5u0jBZ3cUFrjSO4OP4myTdo2dEo1FhNIPkEWWtfBtIYJ8_eNq8dPTMZQ6kcJMpjvG1BxloeW_7dRH-_-L63USA4_j2gToCoowcikWxwxCKCEloOg"/>
+</div>
+</div>
+</div>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-1 max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-8">
+<!-- Page Title & Subtitle -->
+<div class="mb-10">
+<h2 class="text-3xl font-black text-slate-900 dark:text-white sm:text-4xl tracking-tight">Sell Analysis</h2>
+<p class="mt-2 text-lg text-slate-500 dark:text-slate-400">Exit strategy evaluation powered by real-time technical signals.</p>
+</div>
+<!-- Search Section -->
+<div class="bg-white dark:bg-slate-900 rounded-xl shadow-sm border border-slate-200 dark:border-slate-800 p-6 mb-8">
+<div class="flex flex-col md:flex-row items-end gap-6">
+<div class="flex-1 w-full">
+<label class="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-2" for="ticker">Coin Ticker</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-slate-400">search</span>
+<input class="w-full pl-12 pr-4 py-3.5 rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white focus:ring-2 focus:ring-primary focus:border-transparent transition-all" id="ticker" placeholder="e.g. BTC, ETH, SOL" type="text" value="BTC"/>
+</div>
+</div>
+<div class="flex-1 w-full">
+<label class="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-2" for="analysis-type">Timeframe</label>
+<select class="w-full px-4 py-3.5 rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white focus:ring-2 focus:ring-primary focus:border-transparent transition-all" id="analysis-type">
+<option>Daily (1D)</option>
+<option>4 Hours (4H)</option>
+<option>1 Hour (1H)</option>
+<option>Weekly (1W)</option>
+</select>
+</div>
+<button class="w-full md:w-auto px-8 py-3.5 bg-primary text-white font-bold rounded-lg hover:bg-primary/90 transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">analytics</span>
+                        Run Sell Analysis
+                    </button>
+</div>
+</div>
+<!-- Result Status Badge -->
+<div class="flex items-center gap-3 mb-6 animate-in fade-in slide-in-from-bottom-2 duration-500">
+<div class="inline-flex items-center gap-2 px-4 py-2 bg-red-50 dark:bg-red-900/20 border border-red-100 dark:border-red-900/30 rounded-full text-red-600 dark:text-red-400 font-bold text-sm">
+<span class="material-symbols-outlined text-[20px]">warning</span>
+                    Not a good time to sell
+                </div>
+<div class="text-sm font-medium text-slate-500">Last updated: Just now</div>
+</div>
+<!-- Analysis Dashboard Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<!-- Left Column: Summary & Price Action -->
+<div class="lg:col-span-2 space-y-8">
+<!-- Main Sentiment Card -->
+<div class="bg-white dark:bg-slate-900 rounded-xl shadow-sm border border-slate-200 dark:border-slate-800 overflow-hidden">
+<div class="p-6 border-b border-slate-100 dark:border-slate-800 flex justify-between items-center">
+<h3 class="font-bold text-lg text-slate-900 dark:text-white">Bitcoin (BTC) Overview</h3>
+<span class="text-2xl font-black text-slate-900 dark:text-white">$64,241.50 <span class="text-sm font-medium text-red-500">-1.2%</span></span>
+</div>
+<div class="p-6">
+<div class="bg-slate-50 dark:bg-slate-800/50 rounded-lg p-6 flex items-center gap-6 mb-6">
+<div class="relative flex items-center justify-center h-24 w-24">
+<svg class="h-24 w-24 transform -rotate-90">
+<circle class="text-slate-200 dark:text-slate-700" cx="48" cy="48" fill="transparent" r="40" stroke="currentColor" stroke-width="8"></circle>
+<circle class="text-red-500" cx="48" cy="48" fill="transparent" r="40" stroke="currentColor" stroke-dasharray="251.2" stroke-dashoffset="180" stroke-width="8"></circle>
+</svg>
+<span class="absolute text-xl font-black">28%</span>
+</div>
+<div>
+<h4 class="font-bold text-slate-900 dark:text-white">Sell Conviction Score</h4>
+<p class="text-slate-500 dark:text-slate-400 text-sm mt-1">Based on 14 technical indicators, current momentum suggests holding. Significant support levels are holding strong.</p>
+</div>
+</div>
+<!-- Indicator Visualizers -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- RSI Gauge -->
+<div class="space-y-3">
+<div class="flex justify-between items-center text-sm">
+<span class="font-semibold text-slate-700 dark:text-slate-300">RSI (14)</span>
+<span class="font-bold text-slate-900 dark:text-white">42.5 (Neutral)</span>
+</div>
+<div class="relative h-2 w-full bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden">
+<div class="absolute left-[30%] right-[30%] h-full bg-slate-200 dark:bg-slate-700 opacity-50"></div>
+<div class="absolute top-0 bottom-0 left-[42.5%] w-1 bg-primary z-10"></div>
+</div>
+<div class="flex justify-between text-[10px] uppercase font-bold text-slate-400 tracking-wider">
+<span>Oversold</span>
+<span>Neutral</span>
+<span>Overbought</span>
+</div>
+</div>
+<!-- MACD Signal -->
+<div class="space-y-3">
+<div class="flex justify-between items-center text-sm">
+<span class="font-semibold text-slate-700 dark:text-slate-300">MACD Histogram</span>
+<span class="font-bold text-green-500">Bullish Crossover</span>
+</div>
+<div class="flex items-end gap-1 h-8">
+<div class="w-full bg-red-400 h-2 rounded-t-sm opacity-40"></div>
+<div class="w-full bg-red-400 h-4 rounded-t-sm opacity-40"></div>
+<div class="w-full bg-red-400 h-3 rounded-t-sm opacity-40"></div>
+<div class="w-full bg-green-500 h-2 rounded-t-sm"></div>
+<div class="w-full bg-green-500 h-5 rounded-t-sm"></div>
+<div class="w-full bg-green-500 h-7 rounded-t-sm"></div>
+<div class="w-full bg-green-500 h-8 rounded-t-sm"></div>
+</div>
+<div class="flex justify-between text-[10px] uppercase font-bold text-slate-400 tracking-wider">
+<span>Momentum Building</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Market Depth / Volume -->
+<div class="bg-white dark:bg-slate-900 rounded-xl shadow-sm border border-slate-200 dark:border-slate-800 p-6">
+<h3 class="font-bold text-lg text-slate-900 dark:text-white mb-6">Market Depth Analysis</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="space-y-4">
+<div class="flex justify-between text-sm">
+<span class="text-slate-500 dark:text-slate-400">Buy Walls (24h)</span>
+<span class="font-bold text-green-500">$1.2B</span>
+</div>
+<div class="w-full bg-slate-100 dark:bg-slate-800 h-2 rounded-full overflow-hidden">
+<div class="bg-green-500 h-full w-[75%]"></div>
+</div>
+<p class="text-xs text-slate-400">Strong buying pressure detected at $62,000 level.</p>
+</div>
+<div class="space-y-4">
+<div class="flex justify-between text-sm">
+<span class="text-slate-500 dark:text-slate-400">Sell Walls (24h)</span>
+<span class="font-bold text-red-500">$450M</span>
+</div>
+<div class="w-full bg-slate-100 dark:bg-slate-800 h-2 rounded-full overflow-hidden">
+<div class="bg-red-500 h-full w-[30%]"></div>
+</div>
+<p class="text-xs text-slate-400">No significant sell pressure before $68,000.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Checklists & Signal List -->
+<div class="space-y-8">
+<!-- Signals Checklist -->
+<div class="bg-white dark:bg-slate-900 rounded-xl shadow-sm border border-slate-200 dark:border-slate-800 p-6">
+<h3 class="font-bold text-lg text-slate-900 dark:text-white mb-4">Exit Signal Checklist</h3>
+<ul class="space-y-4">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-green-500">check_circle</span>
+<div class="text-sm">
+<p class="font-bold text-slate-800 dark:text-slate-200">Price above 200 SMA</p>
+<p class="text-slate-500 dark:text-slate-400">Trend is still long-term bullish.</p>
+</div>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-slate-300 dark:text-slate-600">radio_button_unchecked</span>
+<div class="text-sm">
+<p class="font-bold text-slate-800 dark:text-slate-200">RSI Divergence</p>
+<p class="text-slate-500 dark:text-slate-400">No bearish divergence confirmed yet.</p>
+</div>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-slate-300 dark:text-slate-600">radio_button_unchecked</span>
+<div class="text-sm">
+<p class="font-bold text-slate-800 dark:text-slate-200">Volume Climax</p>
+<p class="text-slate-500 dark:text-slate-400">No exhaustive selling volume detected.</p>
+</div>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-green-500">check_circle</span>
+<div class="text-sm">
+<p class="font-bold text-slate-800 dark:text-slate-200">Profit Target Not Met</p>
+<p class="text-slate-500 dark:text-slate-400">Next major Fibonacci level at $72.4k.</p>
+</div>
+</li>
+</ul>
+</div>
+<!-- Recommended Action Card -->
+<div class="bg-primary rounded-xl shadow-xl shadow-primary/20 p-6 text-white">
+<div class="flex items-center gap-3 mb-4">
+<span class="material-symbols-outlined text-3xl">lightbulb</span>
+<h3 class="font-bold text-lg">AI Recommendation</h3>
+</div>
+<p class="text-primary-20/90 text-sm mb-6 leading-relaxed">
+                            "Current data indicates the asset is consolidating before a potential breakout. Short-term selling may lead to missing a larger move. Set a trailing stop-loss at $61,500 instead."
+                        </p>
+<button class="w-full py-3 bg-white text-primary font-bold rounded-lg hover:bg-slate-100 transition-colors">
+                            Set Trailing Stop
+                        </button>
+</div>
+<!-- Mini Map/Market Heat (Visual Flavor) -->
+<div class="bg-white dark:bg-slate-900 rounded-xl shadow-sm border border-slate-200 dark:border-slate-800 p-6">
+<h3 class="font-bold text-sm text-slate-500 uppercase tracking-widest mb-4">Global Sentiment Map</h3>
+<div class="aspect-video bg-slate-100 dark:bg-slate-800 rounded-lg overflow-hidden relative">
+<div class="absolute inset-0 bg-gradient-to-br from-primary/10 to-red-500/10"></div>
+<div class="h-full w-full flex items-center justify-center">
+<span class="material-symbols-outlined text-slate-300 text-6xl" data-location="Global">public</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer Footer -->
+<footer class="mt-auto border-t border-slate-200 dark:border-slate-800 py-10 bg-white dark:bg-background-dark">
+<div class="max-w-7xl mx-auto px-4 text-center">
+<p class="text-sm text-slate-500 dark:text-slate-400">
+                    © 2024 CryptoDash Analytics. This is not financial advice.
+                </p>
+</div>
+</footer>
+</div>
+</body></html>

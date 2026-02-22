@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>CryptoDash - Buy Analysis</title>
+<!-- Google Fonts: Manrope -->
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1132d4",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101322",
+                        "success": "#10b981",
+                        "warning": "#f59e0b",
+                        "danger": "#ef4444",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Manrope', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+<!-- Header / Top Navigation -->
+<header class="sticky top-0 z-50 w-full border-b border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex h-16 items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="bg-primary p-1.5 rounded-lg">
+<span class="material-symbols-outlined text-white text-2xl">account_balance_wallet</span>
+</div>
+<h2 class="text-xl font-extrabold tracking-tight text-slate-900 dark:text-white">CryptoDash</h2>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-sm font-semibold text-slate-600 dark:text-slate-400 hover:text-primary transition-colors" href="#">Portfolio</a>
+<a class="text-sm font-semibold text-slate-600 dark:text-slate-400 hover:text-primary transition-colors" href="#">Markets</a>
+<a class="text-sm font-semibold text-slate-600 dark:text-slate-400 hover:text-primary transition-colors" href="#">Trade</a>
+<a class="text-sm font-semibold text-slate-600 dark:text-slate-400 hover:text-primary transition-colors" href="#">News</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-700 transition-all">
+<span class="material-symbols-outlined text-xl">notifications</span>
+</button>
+<button class="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-700 transition-all">
+<span class="material-symbols-outlined text-xl">settings</span>
+</button>
+<div class="h-10 w-10 rounded-full bg-slate-200 dark:bg-slate-800 border-2 border-white dark:border-slate-700 overflow-hidden">
+<img alt="Profile" class="h-full w-full object-cover" data-alt="User profile avatar placeholder" src="https://lh3.googleusercontent.com/aida-public/AB6AXuChVA6c3qP4yw5mGRnp8BBceqxYI5ah3Cnf25J3gtxyckUikCRJpFxQpKbRHHZ2xFHncR_FYkTFQGXU9iv4eZZi-D6r5_4MB6wY2_51EowmWUtFWfIFwCpaAzwZAZcjyuneSVH-zftk5zxSSoB7govkR3U9mDnhBsr2xJ5ui7Go3m1nHmHcZU4C28aAp_2ZC2I1Xro_LQN6QLZCFVZ_7kOub7xOtPgFtd9SW7EGCRPSbHHKKjSV5sg6AJn_2tPhm1anD19GlWD8Ib0"/>
+</div>
+</div>
+</div>
+</div>
+</header>
+<!-- Secondary Sub-Nav Tabs -->
+<div class="w-full bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex gap-8 overflow-x-auto no-scrollbar">
+<a class="flex flex-col items-center justify-center border-b-2 border-primary pt-4 pb-3" href="#">
+<span class="text-sm font-bold text-primary whitespace-nowrap">Buy Analysis</span>
+</a>
+<a class="flex flex-col items-center justify-center border-b-2 border-transparent pt-4 pb-3 text-slate-500 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-200 transition-colors" href="#">
+<span class="text-sm font-bold whitespace-nowrap">Sell Analysis</span>
+</a>
+<a class="flex flex-col items-center justify-center border-b-2 border-transparent pt-4 pb-3 text-slate-500 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-200 transition-colors" href="#">
+<span class="text-sm font-bold whitespace-nowrap">Forecast</span>
+</a>
+<a class="flex flex-col items-center justify-center border-b-2 border-transparent pt-4 pb-3 text-slate-500 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-200 transition-colors" href="#">
+<span class="text-sm font-bold whitespace-nowrap">Market Reports</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Main Content Area -->
+<main class="flex-1 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 w-full">
+<!-- Analysis Input Section -->
+<section class="max-w-3xl mx-auto text-center mb-12">
+<h1 class="text-3xl font-extrabold text-slate-900 dark:text-white mb-4">Smart Crypto Analysis</h1>
+<p class="text-slate-500 dark:text-slate-400 mb-8">Enter any cryptocurrency symbol to get real-time technical analysis and buy/sell signals.</p>
+<div class="flex flex-col md:flex-row items-stretch gap-4 bg-white dark:bg-slate-900 p-2 rounded-xl shadow-lg shadow-slate-200/50 dark:shadow-none border border-slate-100 dark:border-slate-800">
+<div class="relative flex-1 group">
+<div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-slate-400 group-focus-within:text-primary transition-colors">
+<span class="material-symbols-outlined">search</span>
+</div>
+<input class="block w-full pl-11 pr-4 py-4 rounded-lg bg-transparent border-none focus:ring-0 text-lg font-medium placeholder-slate-400 text-slate-900 dark:text-white" placeholder="e.g., BTC, ETH, SOL" type="text" value="BTC"/>
+</div>
+<button class="bg-primary hover:bg-primary/90 text-white font-bold py-4 px-8 rounded-lg shadow-md transition-all active:scale-95 flex items-center justify-center gap-2">
+<span>Analyze Buy Signals</span>
+<span class="material-symbols-outlined text-xl">analytics</span>
+</button>
+</div>
+<!-- Status Badge -->
+<div class="mt-8 flex justify-center">
+<div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-success/10 border border-success/20 text-success animate-pulse">
+<span class="material-symbols-outlined text-lg">check_circle</span>
+<span class="text-sm font-bold tracking-wide uppercase">Perfect time to buy</span>
+</div>
+</div>
+</section>
+<!-- Results Section -->
+<div class="max-w-4xl mx-auto">
+<div class="bg-white dark:bg-slate-900 rounded-2xl shadow-xl shadow-slate-200/40 dark:shadow-none border border-slate-100 dark:border-slate-800 overflow-hidden">
+<!-- Top Summary -->
+<div class="p-8 border-b border-slate-100 dark:border-slate-800">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
+<div class="flex items-center gap-4">
+<div class="h-14 w-14 rounded-xl bg-orange-100 dark:bg-orange-500/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-orange-500 text-3xl">currency_bitcoin</span>
+</div>
+<div>
+<h3 class="text-2xl font-bold text-slate-900 dark:text-white">Bitcoin (BTC)</h3>
+<p class="text-slate-500 dark:text-slate-400 font-medium">$64,231.50 <span class="text-success ml-2">+2.45%</span></p>
+</div>
+</div>
+<div class="w-full md:w-48 h-12">
+<div class="w-full h-full flex items-end gap-1 px-1">
+<div class="bg-primary/20 w-full rounded-t" style="height: 30%;"></div>
+<div class="bg-primary/20 w-full rounded-t" style="height: 45%;"></div>
+<div class="bg-primary/20 w-full rounded-t" style="height: 40%;"></div>
+<div class="bg-primary/20 w-full rounded-t" style="height: 60%;"></div>
+<div class="bg-primary/20 w-full rounded-t" style="height: 55%;"></div>
+<div class="bg-primary/20 w-full rounded-t" style="height: 80%;"></div>
+<div class="bg-primary/20 w-full rounded-t" style="height: 75%;"></div>
+<div class="bg-primary/20 w-full rounded-t" style="height: 90%;"></div>
+<div class="bg-primary/20 w-full rounded-t" style="height: 85%;"></div>
+<div class="bg-primary w-full rounded-t" style="height: 100%;"></div>
+</div>
+<p class="text-[10px] text-center text-slate-400 mt-1 uppercase font-bold tracking-widest">7D Trend</p>
+</div>
+</div>
+<div class="mt-8 p-6 bg-slate-50 dark:bg-slate-800/50 rounded-xl border border-slate-100 dark:border-slate-800">
+<p class="text-slate-700 dark:text-slate-300 leading-relaxed font-medium">
+                                Technical indicators suggest a strong bullish momentum for Bitcoin. The current price is consolidating above the key support level of $62,000. With low selling pressure and growing institutional interest, the risk-to-reward ratio favors a long position at this stage.
+                            </p>
+</div>
+</div>
+<!-- Indicator Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x border-slate-100 dark:border-slate-800">
+<!-- MACD -->
+<div class="p-8">
+<div class="flex items-center justify-between mb-4">
+<span class="text-xs font-bold uppercase tracking-wider text-slate-500">MACD Analysis</span>
+<span class="px-2 py-0.5 rounded text-[10px] font-bold bg-success/10 text-success border border-success/20">BULLISH</span>
+</div>
+<div class="flex items-end gap-2 mb-2">
+<span class="text-2xl font-bold text-slate-900 dark:text-white">Crossover</span>
+<span class="text-slate-400 mb-1 material-symbols-outlined text-sm">trending_up</span>
+</div>
+<p class="text-sm text-slate-500 dark:text-slate-400">Signal line crossed above MACD line on 4H chart.</p>
+</div>
+<!-- RSI -->
+<div class="p-8">
+<div class="flex items-center justify-between mb-4">
+<span class="text-xs font-bold uppercase tracking-wider text-slate-500">Relative Strength Index</span>
+<span class="px-2 py-0.5 rounded text-[10px] font-bold bg-primary/10 text-primary border border-primary/20">NEUTRAL</span>
+</div>
+<div class="flex items-end gap-2 mb-2">
+<span class="text-2xl font-bold text-slate-900 dark:text-white">42.8</span>
+<span class="text-slate-400 mb-1 text-sm font-bold">/ 100</span>
+</div>
+<div class="w-full h-2 bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden mt-3">
+<div class="h-full bg-primary" style="width: 42.8%;"></div>
+</div>
+<p class="text-sm text-slate-500 dark:text-slate-400 mt-4">Approaching oversold territory, potential for reversal.</p>
+</div>
+<!-- Fear & Greed -->
+<div class="p-8">
+<div class="flex items-center justify-between mb-4">
+<span class="text-xs font-bold uppercase tracking-wider text-slate-500">Fear &amp; Greed Index</span>
+<span class="px-2 py-0.5 rounded text-[10px] font-bold bg-warning/10 text-warning border border-warning/20">GREED</span>
+</div>
+<div class="flex items-end gap-2 mb-2">
+<span class="text-2xl font-bold text-slate-900 dark:text-white">65</span>
+<span class="material-symbols-outlined text-warning text-xl mb-1">sentiment_satisfied</span>
+</div>
+<div class="relative pt-2">
+<svg class="w-full h-12" viewbox="0 0 100 40">
+<path d="M 10 35 A 40 40 0 0 1 90 35" fill="none" stroke="#e2e8f0" stroke-linecap="round" stroke-width="8"></path>
+<path d="M 10 35 A 40 40 0 0 1 70 15" fill="none" stroke="#1132d4" stroke-linecap="round" stroke-width="8"></path>
+</svg>
+</div>
+<p class="text-sm text-slate-500 dark:text-slate-400">Market sentiment is optimistic but cautious.</p>
+</div>
+</div>
+<!-- Action Footer -->
+<div class="bg-slate-50 dark:bg-slate-800/80 p-6 flex flex-col md:flex-row items-center justify-between gap-4">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-slate-400">info</span>
+<p class="text-xs text-slate-500 dark:text-slate-400 italic">Data updated 2 minutes ago. Analysis based on 20+ technical indicators.</p>
+</div>
+<div class="flex gap-4">
+<button class="px-6 py-2.5 rounded-lg border border-slate-200 dark:border-slate-700 font-bold text-sm hover:bg-white dark:hover:bg-slate-700 transition-all">Save Report</button>
+<button class="px-6 py-2.5 rounded-lg bg-primary text-white font-bold text-sm hover:shadow-lg hover:shadow-primary/30 transition-all">Trade BTC</button>
+</div>
+</div>
+</div>
+<!-- Related News Preview -->
+<div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="flex gap-4 p-4 rounded-xl bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 shadow-sm hover:shadow-md transition-shadow cursor-pointer">
+<div class="w-24 h-24 rounded-lg bg-slate-200 dark:bg-slate-800 shrink-0 overflow-hidden">
+<img alt="News" class="w-full h-full object-cover" data-alt="Cryptocurrency stock market chart close up" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCq0dP6g_i_N9X74DmrkCJwQ9XfW1Dkei9qDA2KXkGrCofq3POtHWWgO53uV0fnkdqo-nI1GAWWd6Tk8LAbotyOZhpWwnBpk9dg1VhQb4Ju_sEttQy8RtNKoMZmm2eiWgi8Sdx0ubQUc-Hb8ypm5z4S0hvJz6xw2iN8ENpWWGuvgMO2HAtpS95NCvUpNrZvcertR65V2SJhGtplbl9qCh5Bzw0qImQzEBJdhD2waToL0X7U8xqCgvWRR-1MIh8xPd5zpbltsCKClZI"/>
+</div>
+<div class="flex flex-col justify-center">
+<span class="text-[10px] font-bold text-primary uppercase mb-1">Market Analysis</span>
+<h4 class="font-bold text-slate-900 dark:text-white line-clamp-2">Whale activity surges as Bitcoin nears support...</h4>
+<p class="text-xs text-slate-500 mt-1">45 mins ago</p>
+</div>
+</div>
+<div class="flex gap-4 p-4 rounded-xl bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 shadow-sm hover:shadow-md transition-shadow cursor-pointer">
+<div class="w-24 h-24 rounded-lg bg-slate-200 dark:bg-slate-800 shrink-0 overflow-hidden">
+<img alt="News" class="w-full h-full object-cover" data-alt="Abstract blockchain visualization with glowing nodes" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRbFoWCB7dyjysOKwVqliCDIlhoepNwUKusAKoVSfrQE8VOgCaGBRh43UJebImFJnimpDw8-KkRbWljbH-9F1Hbxdc3DQHPKDbaxw4lLxDJslHRszmKuah00tczmcHgimHCaqWoNuyKhUKc2w9CvEnJ0WuSdfwYGmsaf5vMunkF4ztk0quQOpQxV1mjlg5FSKTd2OudaePuxp6XQlIAT6zLVtq-i5Y40e_xTnTCJccshTLdz2cjVoHcvdlP68NKZVPUJDe98lSm0Y"/>
+</div>
+<div class="flex flex-col justify-center">
+<span class="text-[10px] font-bold text-success uppercase mb-1">Regulation</span>
+<h4 class="font-bold text-slate-900 dark:text-white line-clamp-2">New crypto bill signals positive outlook for...</h4>
+<p class="text-xs text-slate-500 mt-1">2 hours ago</p>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Simple Footer -->
+<footer class="mt-12 py-8 border-t border-slate-200 dark:border-slate-800 text-center">
+<p class="text-slate-400 dark:text-slate-500 text-sm">© 2024 CryptoDash AI Analysis Platform. All rights reserved.</p>
+<div class="flex justify-center gap-6 mt-4">
+<a class="text-xs text-slate-500 hover:text-primary" href="#">Terms of Service</a>
+<a class="text-xs text-slate-500 hover:text-primary" href="#">Privacy Policy</a>
+<a class="text-xs text-slate-500 hover:text-primary" href="#">API Documentation</a>
+</div>
+</footer>
+</div>
+</body></html>
